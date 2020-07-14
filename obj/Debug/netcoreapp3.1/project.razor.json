@@ -20541,6 +20541,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Users\\gusta\\Desktop\\Senai\\Aula37EPlayer\\Views\\Equipe\\Index.cshtml",
+      "TargetPath": "Views\\Equipe\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Users\\gusta\\Desktop\\Senai\\Aula37EPlayer\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"

@@ -31,7 +31,10 @@ namespace Aula37EPlayer.Models
             linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
             RewriteCSV(PATH, linhas);
         }
-
+        /// <summary>
+        /// Lê todas as linhas do csv
+        /// </summary>
+        /// <returns>Lista de equipes</returns>
         public List<Equipe> ReadAll()
         {
             List<Equipe> equipes = new List<Equipe>();
@@ -48,7 +51,10 @@ namespace Aula37EPlayer.Models
             }
             return equipes;
         }
-        
+        /// <summary>
+        /// Altera uma equipe
+        /// </summary>
+        /// <param name="e"></param>
         public void Update(Equipe e)
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
