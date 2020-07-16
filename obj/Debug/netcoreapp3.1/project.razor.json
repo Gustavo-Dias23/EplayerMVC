@@ -20551,11 +20551,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Users\\gusta\\Desktop\\Senai\\Aula37EPlayer\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "d:\\Users\\gusta\\Desktop\\Senai\\Aula37EPlayer\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"

@@ -24,7 +24,7 @@ namespace Aula37EPlayer.Controllers
         {
             
             Equipe novaEquipe = new Equipe();
-            novaEquipe.IdEquipe = Int32.Parse( form["IdEquipe"] );
+            novaEquipe.IdEquipe = Int32.Parse(form["IdEquipe"]);
             novaEquipe.Nome = form["Nome"];
             novaEquipe.Imagem = form["Imagem"];
 
