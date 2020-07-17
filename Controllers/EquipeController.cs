@@ -13,13 +13,21 @@ namespace Aula37EPlayer.Controllers
 {
     public class EquipeController : Controller
     {
+        /// <summary>
+        /// Método construtor de equipe
+        /// </summary>
+        /// <returns></returns>
         Equipe equipeModel = new Equipe();
         public IActionResult Index()
         {
             ViewBag.Equipes = equipeModel.ReadAll();
             return View();
         }
-
+        /// <summary>
+        /// Método para cadastro de equipes
+        /// </summary>
+        /// <param name="form"></param>
+        /// <returns></returns>
         public IActionResult Cadastrar(IFormCollection form)
         {
             
@@ -56,7 +64,11 @@ namespace Aula37EPlayer.Controllers
             ViewBag.Equipes = equipeModel.ReadAll();
             return LocalRedirect("~/Equipe");
         }
-
+        /// <summary>
+        /// Método para apagar equipe
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [Route("{id}")]
         public IActionResult Excluir(int id){
             equipeModel.Delete(id);

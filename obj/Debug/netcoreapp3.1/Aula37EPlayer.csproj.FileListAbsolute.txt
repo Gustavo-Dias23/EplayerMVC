@@ -35,3 +35,4 @@ D:\Users\gusta\Desktop\Senai\Aula37EPlayer\obj\Debug\netcoreapp3.1\Aula37EPlayer
 D:\Users\gusta\Desktop\Senai\Aula37EPlayer\obj\Debug\netcoreapp3.1\Aula37EPlayer.pdb
 D:\Users\gusta\Desktop\Senai\Aula37EPlayer\obj\Debug\netcoreapp3.1\Aula37EPlayer.genruntimeconfig.cache
 D:\Users\gusta\Desktop\Senai\Aula37EPlayer\obj\Debug\netcoreapp3.1\Aula37EPlayer.csproj.CopyComplete
+D:\Users\gusta\Desktop\Senai\Aula37EPlayer\obj\Debug\netcoreapp3.1\Razor\Views\Noticias\Index.cshtml.g.cs

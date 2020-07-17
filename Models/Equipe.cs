@@ -12,23 +12,37 @@ namespace Aula37EPlayer.Models
         public string Imagem { get; set; }
         private const string PATH = "Database/equipe.csv";
 
+        /// <summary>
+        /// Método Construtor
+        /// </summary>
         public Equipe(){
             CreateFolderAndFile(PATH);
         }
-
+        /// <summary>
+        /// Método para criar uma nova equipe
+        /// </summary>
+        /// <param name="e"></param>
         public void Create(Equipe e)
         {
             string[] linha = { PrepararLinha(e) };
             File.AppendAllLines(PATH, linha);
         }
+        /// <summary>
+        /// Método para preparar linha no arquivo .csv
+        /// </summary>
+        /// <param name="e"></param>
+        /// <returns></returns>
         public string PrepararLinha(Equipe e){
             return $"{e.IdEquipe};{e.Nome};{e.Imagem}";
         }
-
-        public void Delete(int id)
+        /// <summary>
+        /// Método para excluir equipe do arquivo csv
+        /// </summary>
+        /// <param name="IdEquipe"></param>
+        public void Delete(int IdEquipe)
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
-            linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
+            linhas.RemoveAll(x => x.Split(";")[0] == IdEquipe.ToString());
             RewriteCSV(PATH, linhas);
         }
         /// <summary>
@@ -61,30 +75,6 @@ namespace Aula37EPlayer.Models
             linhas.RemoveAll(x => x.Split(";")[0] == e.IdEquipe.ToString());
             linhas.Add( PrepararLinha(e) );
             RewriteCSV(PATH, linhas);
-        }
-        public List<string> ReadAllLinesCSV(string PATH){
-            
-            List<string> linhas = new List<string>();
-            using(StreamReader file = new StreamReader(PATH))
-            {
-                string linha;
-                while((linha = file.ReadLine()) != null)
-                {
-                    linhas.Add(linha);
-                }
-            }
-            return linhas;
-        }
-        
-        public void RewriteCSV(string PATH, List<string> linhas)
-        {
-            using(StreamWriter output = new StreamWriter(PATH))
-            {
-                foreach (var item in linhas)
-                {
-                    output.Write(item + "\n");
-                }
-            }
         }
     }
 }
